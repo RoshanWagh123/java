@@ -1,0 +1,133 @@
+PRN NO:- 230340520081
+Roshan wagh JH
+First revise topics that sir told
+Also read some related documents about the topics studyied 
+solve some assignment que and practice on todays topics.
+
+
+
+
+
+
+                // CONSTRUCTOR CHAINING
+class Date{
+    int day;
+    int month;
+    int year;
+
+Date (){
+    this (1,7,2023);
+    }
+
+Date(int day,int month,int year){
+    this.day= day;
+    this.month= month;
+    this.year= year;
+    }
+void printRecord(){
+    System.out.println(this.day+ " / " +this.month+ " / " +this.year);
+    }
+}
+class program {
+    public static void main(String[]args){
+        Date dt1 = new Date ();
+        dt1.printRecord();
+
+        Date dt2 = new Date (23,7,2022);
+        dt2.printRecord();
+    }
+}
+
+
+//   Constructor overloading 
+
+
+
+class Date{
+    int day;
+    int month;
+    int year;
+
+    Date (){
+        System.out.println("Inside Parameterless Constructor");
+        this.day  = 0;
+        this.month= 0;
+        this.year = 0;
+    }
+
+    Date (int day,int month,int year){
+        System.out.println("Inside Parameterised Constructor");
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        System.out.println(day+ " / "+month+ " / "+year);
+    }
+}
+
+class program {
+    public static void main(String[]args){
+        Date dt1 = new Date(12,7,2023);
+        Date dt2 = new Date ();
+    }
+
+}
+
+
+Assignment_3_1
+---------------
+package com.roshan.arrayoperations;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArrayOperations {
+	private static Scanner sc = new Scanner(System.in);
+	
+	private static int[] acceptRecord(int[] arr) {
+		System.out.print("Enter array length: ");
+		int arrLength = sc.nextInt();
+		arr = new int[arrLength];
+ 		for(int i=0; i<arr.length; i++) {
+			System.out.print("Enter "+ i +"th element of array: ");
+			arr[i]=sc.nextInt();
+		}
+ 		return arr;
+	}
+
+	private static void printRecord(int[] arr) {
+		if(arr!=null) {
+			System.out.println(Arrays.toString(arr));
+		}
+		else
+			System.out.println("Array is empty!");
+	}
+	
+	private static double calculateAverage(int[] arr) {
+		int sum = 0;
+		double average = 0;
+		if(arr != null) {
+			for(int i : arr) {
+				sum = sum + i;
+				}
+			average = sum/arr.length;
+		}
+		else
+			System.out.println("Array is empty!");
+		return average;
+		
+	}
+	
+	private static int calculateSum(int[] arr) {
+		int sum = 0;
+		if(arr != null) {
+			for(int i : arr) {
+				sum = sum + i;
+				}
+		}
+		else
+			System.out.println("Array is empty!");
+		return sum;
+		
+	}
+	
+	incomplete
